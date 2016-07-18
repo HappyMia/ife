@@ -1,0 +1,197 @@
+body{
+	margin: 0; /*外边据*/
+	padding: 0; /*内边据*/
+	border: 0;
+	outline:0;
+	background: #E8E8E8;
+    font-family: Verdana,SimHei,Times, TimesNR, 'New Century Schoolbook',Georgia, 'New York', serif,SimHei,sans-serif;
+    vertical-align: baseline;
+    text-align: left;
+}
+header{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	width: auto;
+	height: 50px;
+    background:url(images/headerbg.png) repeat-x;
+}
+header div.logo{
+	position: absolute;
+	left: 50px;
+}
+header>nav{
+	float: right;
+	margin-left: 20px;
+	margin-top: 0px;  
+}
+header nav ul li{
+	width: 100px;
+	height: 20px;
+	float: left;
+/*	display: inline-block;*/
+	color: black; 
+}
+header  a{
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+header a:link,a:visited{
+   color:white;
+}
+
+header a:hover{
+   color: #B8B8B8;
+}
+header .active a, a:hover{
+  color: #B8B8B8;
+}
+.article,#figures,aside{
+  position: relative;
+  width: 1800px;
+  height: auto;
+  left: 30px;
+  top: 0px;
+  background: #F8F8F8;
+  margin: 20px;
+  padding: 10px 20px 25px 20px;
+  border:1px 2px 2px 1px;
+  border-style: solid;
+  background-color:  #ccc #ccc #ccc #ccc;
+  display: block;
+  box-shadow:3px 3px 3px #333;
+} 
+.article h3{
+	color: rgb(136,136,136);
+ } 
+
+.article div.author{
+	font-size:15px;
+	font-weight: bold;
+	color: #B0B0B0;
+}
+.article p{
+    text-indent: 30px;
+    line-height: 30px;
+}
+.article p a{
+	color: #0000FF;
+}
+.article div img{
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+div ul li{
+	list-style-type: none;
+	font-size: 15px;
+	line-height: 30px;
+}
+#figures figure{
+	position: relative;
+	width: 120px;
+	height: 150px;
+	border:1px solid #ccc;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+}
+#figures figure img{
+	position: relative;
+	width: 100px;
+	height: 80px;
+}
+.article div ol{
+  position: relative;
+  font-weight: bold;
+  line-height: 20px;
+  left: 30px;
+  display: block;
+}
+.article div ol li{
+   line-height: 25px;
+   font-size: 18px;
+   font-weight: bold;
+}
+.article table{
+   border-collapse:collapse;
+   caption-side: top; 
+   text-align: left;
+   width: 100%;
+}
+.article table caption{
+	text-align: left;
+}
+.article th,td,tr{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #C0C0C0;
+	height: 30px;
+	text-align: left;
+	font-size: 13px;
+}
+.article th{
+	background-color: #282828;
+	color: white;
+	font-size: 15px;
+   
+}
+.article tfoot{
+	background: #C0C0C0;
+	font-weight: bold;
+}
+aside h2{
+	height: 40px;
+	border-left: 3px solid #ccc;
+	text-align: left;
+	padding: 5px 0 0 10px;
+}
+aside label{
+  display: inline-block;
+  width: 150px;
+  height: 25px;
+  margin-left: 400px; 
+  text-align: right;
+  padding-right: 20px;
+  vertical-align: top;
+}
+aside label,input,.tip{
+	margin-top: 10px;
+}
+
+aside .tip{
+	margin-left: 570px;
+}
+aside textarea{
+	width: 800px;
+	height: 80px;
+	vertical-align:text-top; 
+	margin-top: 10px;
+}
+aside form button{
+	position: relative;
+	left: 20px;
+	width: 1600px;
+	height: 50px;
+	border-radius: 10px;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	background-color: #4169E1; 
+	cursor: pointer;
+}
+footer{
+	width:100%;
+	height:50px;
+	background:black;
+	padding-top:20px;
+	text-align:center;
+	font-size:12px;
+	line-height:30px;
+	color:white;
+}
