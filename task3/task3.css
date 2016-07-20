@@ -1,0 +1,43 @@
+#container{
+	background-color: #eee;
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid #999;
+}
+#container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.team,.introduce,.member{
+	background-color: #FFF;
+	border: 1px solid #999;
+	padding: 20px;
+}
+.team{
+	width: 160px;
+	float: left;
+	position: relative;  /* 为h4的绝对定位提供依赖 */
+}
+.team h4{
+   position: absolute;
+   right: 5px;
+   top: 0;
+   font-size: 14px;
+}
+ img{
+	width: 80px;
+	height: 80px;
+}
+.introduce{
+	height: 400px;
+	margin: 0 140px 0 220px;
+}
+.member{
+	width: 80px;
+	height:auto; 
+    float: right;
+}
+.member img{
+	margin: 10px 0 10px 0;
+}
