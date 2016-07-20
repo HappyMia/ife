@@ -1,0 +1,54 @@
+body{
+	
+	text-align:center;
+}
+/*水平居中
+#container{
+	width:400px;
+	height:200px;
+	background-color:#ccc;
+	margin:0 auto;
+}
+*/
+*{margin:0;
+padding:0;}
+.container{
+	overflow:auto;
+	/*不设置宽高则根据浏览器大小变化
+	background-color:#ccc;
+	position:absolute;
+	top:25%;
+	right:25%;
+	bottom:25%;
+	left:25%;
+	*/
+	/*宽高确定的情况下居中*/
+	background-color:#ccc;
+	position:absolute;
+	width:400px;
+	height:200px;
+	margin:auto;
+	top: 0; 
+	left: 0;
+	bottom: 0;
+	right: 0;
+	
+}
+
+.corner{
+	 width: 50px;
+     height: 50px;
+     background: #fc0;
+}
+.top-left{
+	border-bottom-right-radius:50px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.bottom-right{
+	border-top-left-radius:50px;
+    position:absolute;
+	right:0;
+	bottom:0;
+}
