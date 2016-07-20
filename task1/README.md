@@ -1,6 +1,6 @@
 #任务一：零基础HTML编码
 ##Demo
-[点我查看demo](https://happymia.github.io/ife/task1/index.html))
+[点我查看demo](https://happymia.github.io/ife/task1/index.html)
 ##任务目的
 
     了解HTML的定义、概念、发展简史
