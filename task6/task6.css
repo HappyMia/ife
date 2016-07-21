@@ -193,7 +193,7 @@ header hr{
 	color:#f5e327;
 	font-family:"微软雅黑";
 	float:left;/* 设置段落p标签的首字为浮动，让其占据多行的空间 */
-	line-height:52px;
+	line-height:52px; /* 这里为首字重新设置行高，在火狐之外的浏览器起作用，解决段落文字覆盖首字的问题 */
 }
 
 .section3 .article img{
