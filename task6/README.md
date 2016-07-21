@@ -22,3 +22,4 @@
 	clear:both;
 }
 ```
+这里的布局方式主要是用了浮动加外边距，可使用float布局+position
