@@ -285,7 +285,7 @@ header hr{
 	float:left;
 	font-size:110px;
 	line-height:86px;
-	/* 行高的设置解决文本太大超出框的问题 */
+	/* 行高的设置为了解决文本太大超出框的问题 */
 	color:#ffffff;
 	font-family:"微软雅黑";
 	margin:30px 10px 0 10px;
