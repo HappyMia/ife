@@ -65,5 +65,5 @@ position：static，元素框正常生成。块级元素生成一个矩形框，
               
               justify-content:center;
               
-              align-items:center;
+              align-items:center; 
    
