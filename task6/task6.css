@@ -226,15 +226,15 @@ header hr{
 	background:black;
 	opacity:0.4;
 	filter:Alpha(opacity=40);
-	margin-top:-62px;
+	margin-top:-65px;
 }
 .section3 .aside_up p{
 	border-left:3px solid #72b16a;
-	heigth:44px;
+	height:44px;
 	font-size:26px;
 	color:#ffffff;
 	font-family:"微软雅黑";
-	margin-top:20px;
+	margin-top:18px;
 	margin-left: 20px;
 	padding-left:10px;
 }
