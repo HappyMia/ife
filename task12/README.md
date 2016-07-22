@@ -1,6 +1,6 @@
 # 任务十二：学习CSS 3的新特性
 ## demo
-[点击查看demo](https://happymia.github.io/ife/task13/index.html)
+[点击查看demo](https://happymia.github.io/ife/task12/index.html)
 ## 任务描述
 
 * 实现 [示例图](http://7xrp04.com1.z0.glb.clouddn.com/task_1_12_1.jpg)中的几个例子
