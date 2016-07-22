@@ -23,7 +23,7 @@
  mediaType:all：所有设备，screen：电脑屏幕，屏蔽电脑，智能手机等。print：打印机speech：屏幕阅读器等<br/>
  media feature：媒体查询的条件，比如（max-width：768px）
 #### 元素设置
-最外层一个盛放所以网格的div容器container，每个网格有一个外层div（outer），里面包含一个内层div（inner）；
+最外层一个盛放所以网格的div容器container，每个网格有一个外层div（outer），里面包含一个内层div（inner）；所有outer都是左浮动
 ```HTML
 			<div class="outer col-md-4 ">
 				<div class="inner"></div>
