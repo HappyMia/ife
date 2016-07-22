@@ -1,6 +1,6 @@
 # 任务十：Flexbox 布局练习
 # Demo
-(点击查看demo)[https://happymia.github.io/ife/task3/index.html]
+[点击查看demo](https://happymia.github.io/ife/task10/index.html)
 
 # 任务目的
 
