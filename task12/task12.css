@@ -1,0 +1,74 @@
+body{
+	font-family: "Microsoft Yahei";
+}
+table{
+	width:300px;
+	border:2px solid white;
+	margin-bottom:50px;
+}
+table  th{
+	background-color:black;
+	color:white;
+}
+table tbody tr:nth-child(even){
+	background-color:#ccc;
+}
+table tbody tr:nth-child(-n+3){
+	color:red;
+}
+.user {
+	width:150px;
+	transition:width 1s;
+	-moz-transition:width 1s;
+	-webkit-transition:width 1s;
+	-o-transition:width 1s;;
+}
+.user:focus{
+	width:200px;
+}
+.banner{
+	margin-top:20px;
+	position:relative;
+}
+.slider{
+	position:absolute;
+	width:300px;
+	height:200px;
+}
+/* 通过keyframes规则创建动画在动画过程中，您能够多次改变这套 CSS 样式。 */
+@keyframes slidein {
+	from {left:-100%;}
+	to {left:0;}
+}
+/* 默认的排列方式：第三张最上面，第二张中间，第三张最下面 */
+#first{
+	background-color:green;
+}
+#second{
+	background:red;
+}
+#third{
+	background-color:blue;
+}
+.slider:target{
+	z-index:20; /* 当处于目标状态时，排在最上面 */
+	animation:slidein 1s;
+}
+.control {
+	position:absolute;
+	z-index:100;
+	left:200px;
+	top:170px;
+}
+.control a{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	text-align:center; /* 水平居中 */
+	line-height:30px; /* 和高度相同，垂直居中 */
+	color:#000;
+	text-decoration:none;
+	background-color:#fff;
+	opacity:0.3;
+	filter:Alpha(opacity=30);
+}
