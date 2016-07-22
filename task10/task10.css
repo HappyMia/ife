@@ -1,0 +1,98 @@
+*{
+	padding:0;
+	margin:0;
+}
+.container{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	width:100%;
+	border:1px solid #eee;
+	padding:20px;
+	
+	display:flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flexbox;  /* 注意IE与其他浏览器的区别 */
+	
+	/* 项目沿主轴的排列方向，row:主轴为水平方向，起点在左端 */
+	-moz-flex-direction:row;  
+	-webkit-flex-direction:row;
+	-ms-flex-direction:row;
+	flex-direction:row;
+
+	/*  如果一条线排不下，换行，第一行在上方。 */
+	-moz-flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+	
+/*  以上两个属性也可以用下面两句替代
+    flex-flow: row wrap; 
+	-ms-flex-wrap:wrap; */
+	
+	/* 项目在主轴上的对齐方式，两端对齐，项目之间的间隔相等 */
+	-moz-justify-content:space-between;
+	-webkit-justify-content:space-between;
+	-ms-flex-pack:justify;   /* 注意IE与其他浏览器的区别 */
+	justify-content:space-between;
+}
+.item{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	width:150px;
+	border: 1px solid #f00;
+	padding:20px;
+    /* margin:20px; */
+	margin-bottom:20px;
+	flex: 0 1 auto; 
+	-ms-flex:0,1,auto;
+	/* flex-grow,flex-shrink和flex-basis属性的缩写，flex-grow=0：如果存在剩余空间也不放大，flex-shrink=1：如果空间不足等比例缩小flex-basis：auto项目本来的大小 */
+}
+.one{
+	height:120px;
+}
+.two{
+	height:100px;
+}
+.three{
+	height:40px;
+}
+.four{
+	border: 1px solid #0f0;
+	height:200px;
+}
+@media (min-width:640px){
+ /* 垂直对齐方式：四个元素的中间沿交叉轴的中间对齐 */
+.container{
+	-moz-align-items:center;	
+	-webkit-align-items:center;	
+	-ms-flex-align:center;	/* 注意IE与其他浏览器的区别 */
+	align-items:center;	
+}
+/* 设置第二个元素的排列顺序在最后 */
+.four{
+    -moz-order:99;	 
+    -webkit-order:99;	 
+    -ms-flex-order:99;	 
+    order:99;	 
+}
+}
+
+@media (max-width:639px){
+.container{
+	/* 四个元素的上方沿交叉轴起点对齐 */
+	-moz-align-items:flex-start;	
+	-webkit-align-items:flex-start;	
+	-ms-flex-align:start;	
+	align-items:flex-start;	
+}
+/* 设置第二个元素的排列顺序在最前 */
+.four{
+    -moz-order:-99;	 
+    -webkit-order:-99;	 
+    -ms-flex-order:-99;	 
+    order:-99;	 
+}
+}
