@@ -68,17 +68,18 @@ function renderChart() {
 	
 	var width,margin;
 	switch (pageState.nowGraTime){
-		  case "day": width="5px";margin="0 5px 0 5px";  
+		  case "day": width="5px";margin="0 5px 0 5px";baseDis=15;  //baseDis，宽度之间的间距，用来进行定位
 		  break;
-		  case "week": width="20px";margin="0 40px 0 40px";  
+		  case "week": width="20px";margin="0 40px 0 40px"; baseDis=100; 
 		  break;
-		  case "month": width="50px";margin="0 200px 0 200px";
+		  case "month": width="50px";margin="0 200px 0 200px";baseDis=620;
 		  break;
 		  default:alert("error pageState");
 	}
   //动态渲染chartData中的数据
+    var i=0;
     for (data in chartData){	
-	 
+	    
 		if(chartData[data]>=300){color="red";}
 		else if(chartData[data]>=200&&chartData[data]<300){color="blue";}
 		else if(chartData[data]>=100&&chartData[data]<200){color="orange";}
@@ -86,13 +87,13 @@ function renderChart() {
         var divElement=document.createElement("div");
 		div.appendChild(divElement);
 		divElement.style.width=width;
+		divElement.style.bottom=0;
 		divElement.style.height=chartData[data];
 		divElement.style.border="1px solid #fff";
 		divElement.style.background=color;
-		divElement.style.margin=margin;
+	    divElement.style.left=(20+baseDis*(i++));//不同时间粒度的left不同
 		divElement.style.display="inline-block";
-		divElement.title= data+" : "+chartData[data];	//title 属性规定关于元素的额外信息。
-		                                                //这些信息通常会在鼠标移到元素上时显示一段工具提示文本（tooltip text）。	
+		divElement.title= data+" : "+chartData[data];	//title 属性规定关于元素的额外信息。                                              //这些信息通常会在鼠标移到元素上时显示一段工具提示文本（tooltip text）。	
 	}
 }
 //求数组平均值的函数
@@ -242,19 +243,19 @@ function initCitySelector() {
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
   // 处理好的数据存到 chartData 中
-	switch (pageState.nowGraTime){
-	
-	  case "day": chartData=aqiSourceData[pageState.nowSelectCity];
-	  break;
-	  
-	  case "week":chartData=graTimeWeek(aqiSourceData[pageState.nowSelectCity]);
-	  break;
-	  
-	  case "month":chartData=graTimeMonth(aqiSourceData[pageState.nowSelectCity]);
-	  break;
-	  default:alert("error pageState");  
-	} 
-	renderChart();
+    	switch (pageState.nowGraTime){
+		
+		  case "day": chartData=aqiSourceData[pageState.nowSelectCity];
+		  break;
+		  
+		  case "week":chartData=graTimeWeek(aqiSourceData[pageState.nowSelectCity]);
+		  break;
+		  
+		  case "month":chartData=graTimeMonth(aqiSourceData[pageState.nowSelectCity]);
+		  break;
+		  default:alert("error pageState");  
+		} 
+		renderChart();
 }
 
 /**
@@ -267,4 +268,7 @@ function init() {
 }
 
 init();
+
+
+
 }
