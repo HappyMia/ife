@@ -6,17 +6,21 @@ window.onload=function(){
 	oLeft_out=document.getElementById("left_out");
 	oRight_out=document.getElementById("right_out");
 	oQueue=document.getElementById("queue");
-	
+	//删除字符串前后空格,js中没有trim，VBjs中有这个函数，但是可以再js中使用
+	function trim(str){
+	   return str.replace(/(^\s*)|(\s*$)/g,"");
+   }
 	var result=[]; //用来存放队列元素的数组
 	//获取输入的值
 	function getValue(){
-		var userInput=oInput.value.trim();		
+		//var userInput=oInput.value.trim();		
+		var userInput=trim(oInput.value);		
 		return userInput;
 	}
 	//左侧入
 	oLeft_in.onclick=function(){
 		var userInput=getValue();
-			if(/^[0-9]+$/.test(oInput.value.trim())){    //匹配数字，trim过滤空格
+			if(/^[0-9]+$/.test(trim(oInput.value))){    //匹配数字，trim过滤空格
 				result.unshift(userInput);
 				renderQueue();
 			}
@@ -28,7 +32,7 @@ window.onload=function(){
 	//右侧入
 	oRight_in.onclick=function(){
 		var userInput=getValue();
-		if(/^[0-9]+$/.test(oInput.value.trim())){
+		if(/^[0-9]+$/.test(trim(oInput.value))){
 			result.push(userInput);
 			renderQueue();	
 		}
@@ -72,8 +76,9 @@ window.onload=function(){
 	*/
 	oQueue.onclick=function(evt){
 		var e=evt||window.event;
-		if(e.target.nodeName=="DIV"){ //如果点击了div元素，则执行
-			var num=e.target.innerHTML;
+		var target = e.target||e.srcElement;
+		if(target.nodeName=="DIV"){ //如果点击了div元素，则执行
+			var num=target.innerHTML;
 			for(var i=0;i<result.length;i++){
 				if(result[i]==num){
 					result.splice(i,1); //从第i个开始，去掉1个元素
