@@ -78,8 +78,7 @@ function renderChart() {
 	}
   //动态渲染chartData中的数据
     var i=0;
-    for (data in chartData){	
-	    
+    for (data in chartData){	  
 		if(chartData[data]>=300){color="red";}
 		else if(chartData[data]>=200&&chartData[data]<300){color="blue";}
 		else if(chartData[data]>=100&&chartData[data]<200){color="orange";}
@@ -137,8 +136,7 @@ function graTimeWeek(object){
 		   sumData2.push(object[data]);
 	   }else if(month==2){
 		     sumData3.push(object[data]);
-	    }	 
-	  	   
+	    }	 	  	   
 	}
 	  aqiMonthData["Jan"]=Math.round(ave(sumData1));
 	  aqiMonthData["Feb"]=Math.round(ave(sumData2));
@@ -172,8 +170,6 @@ function graTimeChange(evt) {
 	  
 	} 
 	renderChart();
-
-	
 }
 
 /**
@@ -191,13 +187,10 @@ function citySelectChange(evt) {
    var target = evt.target||evt.srcElement;
   pageState.nowSelectCity=target.value;
 	switch (pageState.nowGraTime){
-	  case "day": chartData=aqiSourceData[pageState.nowSelectCity];
-	  
+	  case "day": chartData=aqiSourceData[pageState.nowSelectCity];  
 	  break;
-	  case "week":chartData=graTimeWeek(aqiSourceData[pageState.nowSelectCity]);
-	  
+	  case "week":chartData=graTimeWeek(aqiSourceData[pageState.nowSelectCity]); 
 	  break;
-	  
 	  case "month":chartData=graTimeMonth(aqiSourceData[pageState.nowSelectCity]);
 	  break;
 	  default:alert("error pageState");
@@ -267,7 +260,4 @@ function init() {
 }
 
 init();
-
-
-
 }
