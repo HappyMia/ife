@@ -1,0 +1,34 @@
+fieldset {
+	width:200px;
+	height:50px;
+	float:left;
+	border:2px solid #ccc;
+    margin:20px;
+	font-size:20px;
+	padding:20px;
+}
+#city-select{
+	font-size:20px;
+}
+#forms {
+	overflow:hidden;  /* 起到清除浮动的影响，不然该元素会塌陷 */
+	text-align:center;
+}
+/* 也可以起到清除浮动的左右
+ #forms:after { 
+	content:"";
+	display:block;
+	clear:both;
+} */
+.aqi-chart-wrap{
+	height:600px;
+	width:1300px;
+	padding:0 50px;
+	border:1px solid #999;
+	margin:20px auto;
+	position:relative;	
+
+}
+.aqi-chart-wrap div {
+   position:absolute;
+}
