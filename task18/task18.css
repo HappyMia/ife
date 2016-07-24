@@ -1,6 +1,7 @@
 #queue div{
 	background:red;
-	display:inline-block;
+	/* display:inline-block; 在IE7以下不起作用*/
+	display:inline;
 	margin:10px 20px 0 20px;
 	padding:10px 10px;
 	text-align:center;
