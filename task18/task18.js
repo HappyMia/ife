@@ -65,16 +65,8 @@ window.onload=function(){
 	}
 	
 	//点击某个元素删除
-	/*
-	for(var i=0;i<result.length;i++){
-		alert(oQueue.childNodes[i])
-		oQueue.childNodes[i].onclick=function(){
-			result.splice(i,1); //从第i个开始，去掉1个元素
-			renderQueue();
-		}
-	}
-	*/
-	oQueue.onclick=function(evt){
+	//这里有一个bug，在当存在两个相同的元素时，点击后面那个，则删除的是前面那个数字
+/* 	oQueue.onclick=function(evt){
 		var e=evt||window.event;
 		var target = e.target||e.srcElement;
 		if(target.nodeName=="DIV"){ //如果点击了div元素，则执行
@@ -85,10 +77,9 @@ window.onload=function(){
 					renderQueue();
 					break;
 				}
-			}
-			
+			}	
 		}
-	}
+	} */
     
 	//渲染队列
 	function renderQueue(){
@@ -99,7 +90,14 @@ window.onload=function(){
 			divArray.push(divElement);
 		}
 		oQueue.innerHTML=divArray.join("");
-
+	  //点击某个元素删除,这里必须使用闭包，否则绑定到div上的参数等于循环结束时的参数
+	   for(var i=0;i<oQueue.childNodes.length;i++){
+		oQueue.childNodes[i].onclick=function(i){  //这里也要传入个i
+			return function(){
+			result.splice(i,1); //从第i个开始，去掉1个元素
+			renderQueue();	
+			}
+		}(i);
+	  }
 	}
-	
 }
