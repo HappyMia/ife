@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" Content="text/html" charset="utf-8">
+		<title>任务二十二：JavaScript和树（一）</title>
+		<script type="text/javascript" src="task22.js"></script>
+		<style>
+			.tree{
+				display:inline-block;
+				padding: 10px;
+				border: 1px solid #000;
+				background-color:#fff;
+			}
+				
+			.child_3{
+				width:30px;
+			}
+			button{
+			 margin-top:20px;
+			 width:80px;
+			 height:30px;
+			 background:#fff;
+			 border:1px solid #ccc;
+			}
+		  
+		</style>
+	</head>
+	<body>
+		<div class="tree root">
+			<div class="tree child_1">
+				<div class="tree child_2">
+					<div class="tree child_3"></div>
+					<div class="tree child_3"></div>
+				</div>
+				<div class="tree child_2">
+					<div class="tree child_3"></div>
+					<div class="tree child_3"></div>
+				</div>
+			</div>
+			<div class="tree child_1">
+				<div class="tree child_2">
+					<div class="tree child_3"></div>
+					<div class="tree child_3"></div>
+				</div>
+				<div class="tree child_2">
+					<div class="tree child_3"></div>
+					<div class="tree child_3"></div>
+				</div>
+			</div>
+		</div>
+		</br>
+		<button id="preorder" type="button">前序遍历</button>
+		<button id="inorder" type="button">中序遍历</button>
+		<button id="postorder" type="button">后序遍历</button>
+		<button id="byLayer" type="button">按层遍历</button>
+	</body>
+</html>
