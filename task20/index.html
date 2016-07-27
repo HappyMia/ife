@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+		<title>任务二十：字符串的模糊匹配</title>
+		<script src="task20.js"></script>
+		<style>
+			textarea,button,div,input{
+				margin:20px 0 0 20px;
+			}
+			span{
+			 color:green;
+			 display:inline;
+			}
+			#source div{
+				background:red;
+				/* display:inline-block; 在IE7以下不起作用*/
+				display:inline;
+				margin:10px 20px 0 20px;
+				padding:10px 10px;
+				text-align:center;
+				color:#fff;
+				cursor:pointer;
+			   }
+		</style>
+	</head>
+	<body>
+		<textarea id="input" name="user" type="text"></textarea><br/>
+		<button id="left_in">左侧入</button>
+		<button id="right_in">右侧入</button>
+		<button id="left_out">左侧出</button>
+		<button id="right_out">右侧出</button>
+		<div id="source"></div>
+		<input id="search" type="text"></input><br/>
+		<button id="search_button">查询</button><br/>
+	
+	</body>
+</html>
