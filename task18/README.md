@@ -42,3 +42,22 @@ function trim(str){
   .selector { *display: inline }
 ```
 注意这两个 display要先后放在两个CSS声明中才有效果，这是IE的一个经典bug，如果先定义了display:inline-block，然后再将 display设回inline或block，layout不会消失。不能写进一个声明中。
+
+在添加删除事件的时候遇到一个bug，代码如下：
+```javascript
+//这里有一个bug，在当存在两个相同的元素时，点击后面那个，则删除的是前面那个数字
+/* 	oQueue.onclick=function(evt){
+		var e=evt||window.event;
+		var target = e.target||e.srcElement;
+		if(target.nodeName=="DIV"){ //如果点击了div元素，则执行
+			var num=target.innerHTML;
+			for(var i=0;i<result.length;i++){
+				if(result[i]==num){
+					result.splice(i,1); //从第i个开始，去掉1个元素
+					renderQueue();
+					break;
+				}
+			}	
+		}
+```
+解决办法：在渲染DOM完毕的时候为每个元素删除事件。
