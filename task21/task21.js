@@ -94,7 +94,7 @@ window.onload=function(){
 		addDivElement();
 	}
 	
-	//爱好输入集处理
+	//爱好输入处理
 	
 	function addHobby(){
 		var inputStr=$("#hobby_input")[0].value.trim();
