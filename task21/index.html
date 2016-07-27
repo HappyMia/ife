@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+		<title>任务二十一：基础JavaScript练习（四）</title>
+		<script src="task21.js"></script>
+		<style>
+			*{
+				font-family:SimHei;
+			}
+			textarea,button,div,input{
+				margin:20px 0 0 20px;
+				
+			}
+			label{
+			  font-size:30px;
+			}
+			#input{
+			  border:3px solid #00BFFF;
+			  font-size:20px;
+			  width:200px;
+			  height:30px;
+			}
+		    #confirm{
+				font-size:20px;
+				border:1px solid #ccc;
+				background-color:#fff;
+				border-radius:10px;
+			}
+
+			#tags div{
+				background-color:#00BFFF;
+				height:30px;
+				padding:10px;
+				color:#fff;
+				font-size:30px;
+			}
+			#hobby div{
+				background-color:#FF6633;
+				height:30px;
+				padding:10px;
+				color:#fff;
+				font-size:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<label>Tag:</label><input id="input" name="user" type="text"></input>
+		<div id="tags"></div>
+		<textarea id="hobby_input"></textarea><br/>
+		<button id="confirm" type="button">确认兴趣爱好</button><br/>
+		<div id="hobby"></div>
+		
+	
+	</body>
+</html>
