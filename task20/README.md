@@ -1,6 +1,6 @@
 # 任务二十：字符串的模糊匹配
 ## Demo
-[demo](https://happymia.github.io/ife/task3/index.html)
+[demo](https://happymia.github.io/ife/task20/index.html)
 
 ## 任务描述
 * 基于任务18进行升级
