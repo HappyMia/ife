@@ -43,7 +43,7 @@ window.onload=function(){
 			var inputString=getInput();
 			if(inputString.length==0){
 				alert("输入为空");
-			}else if(tags.toString().indexOf(inputString)<0){  //这里有一个去重
+			}else if(tags.indexOf(inputString)<0){  //这里有一个去重
 				if(tags.length<10){
 				    tags.push(inputString);   //长度小于10，右输入
 					renderTags();
@@ -94,7 +94,7 @@ window.onload=function(){
 		addDivElement();
 	}
 	
-	//爱好输入集处理
+	//爱好输入处理
 	
 	function addHobby(){
 		var inputStr=$("#hobby_input")[0].value.trim();
@@ -108,7 +108,7 @@ window.onload=function(){
 		//var tempArr=inputStr.split(/[\s|,|，|、]+/g); //这里可以匹配多个分割符，这样每一个项不用在做trim处理了
 		var tempArr=inputStr.split(/[^0-9a-zA-Z\u4e00-\u9fa5]/g).filter(function(item){return item.length > 0}); //字母数字汉字之外的都归为分隔符
 		var result = [], hash = {};
-        for (var i = 0, elem; (elem = tempArr[i]) != null; i++) {  //去重，用一个hashtable的结构记录已有的元素
+        for (var i = 0, elem; (elem = tempArr[i]) != null; i++) {  //给定数组去重，用一个hashtable的结构记录已有的元素
 			if (!hash[elem]) {
 				result.push(elem);
 				hash[elem] = true;
