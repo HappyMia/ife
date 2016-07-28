@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" Content="text/html" charset="utf-8">
+		<title>任务二十五：JavaScript和树（四）</title>
+		<script type="text/javascript" src="task25.js"></script>
+        <link rel="stylesheet" type="text/css" href="task25.css">
+	</head>
+	<body>  
+		<div class="tree root"><div class="disp label">+</div>creature
+			<div class="tree child_1"><div class="disp label">+</div>animal
+				<div class="tree child_2"><div class="disp label">+</div>livestock
+					<div class="tree child_3">pig</div>
+					<div class="tree child_3">horse</div>
+					<div class="tree child_3">sheep</div>
+					<div class="tree child_3">cattle</div>
+				</div>
+				<div class="tree child_2">bird
+				</div>
+				<div class="tree child_2"><div class="disp label">+</div>cute
+					<div class="tree child_3">dog</div>
+					<div class="tree child_3">cat</div>
+				</div>
+			</div>
+			 <div class="tree child_1"><div class="disp label">+</div>plant
+				<div class="tree child_2"><div class="disp label">+</div>flower
+					<div class="tree child_3">rose</div>
+					<div class="tree child_3">calla</div>
+					<div class="tree child_3">peony</div>
+				</div>
+				<div class="tree child_2"><div class="disp label">+</div>food
+					<div class="tree child_3"><div class="disp label">+</div>grain
+						<div class="tree child_4">wheat</div>
+						<div class="tree child_4">corn</div>
+					</div>
+					<div class="tree child_3">fruit</div>
+				</div>
+			</div>
+			<div class="tree child_1">microorganism</div> 
+		</div>
+		<br/>
+		<div class="forms">
+			<button id="preorder" type="button">深度优先遍历</button>
+			<button id="byLayer" type="button">广度优先遍历</button>
+			
+			<input id="userInput" type="text" placeholder="输入想要查询的节点"></input>
+			<button id="search" type="button">查询节点</button>
+		
+			<label>选中某个节点点击按钮删除</label>
+			<button id="delete" type="button">删除节点</button>
+		
+			<label>选中某个节点在此节点下添加子节点</label>
+			<input id="userAdd" type="text" placeholder="输入想要添加的节点"></input>
+			<button id="add" type="button">添加节点</button>
+		</div>
+	</body>
+</html>
