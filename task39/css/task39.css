@@ -1,0 +1,71 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+/* 父元素绝对定位，子元素相对定位 */
+#sortTable{
+	position:absolute;
+	top:200px;
+	margin-top:20px;
+}
+#tabHead{
+	position:relative;
+}
+#tabBody{
+	position:relative;
+}
+#sortTable,td,th{
+	border:1px solid #ccc;
+	border-collapse:collapse;
+}
+
+td,th{
+	width:150px;
+	height:50px;
+	text-align:center;
+	line-height:10px;
+	font-size:20px;
+	font-family:"Microsoft YaHei",simHei,Serif;
+}
+th{
+	background-color:#000;
+	opacity:0.5;
+	filter:Alpha(opacity=50);
+	color:#fff;
+
+}
+th .sort_button{
+	display:inline-block;
+	position:absolute;
+	margin-left:20px;
+	 
+}
+th .up_arrow{
+	width:0;
+	height:0;
+	border-bottom:10px solid #fff;
+	border-right:10px solid transparent;
+	border-left:10px solid transparent;
+	margin-bottom:5px;
+}
+th .down_arrow{
+	width:0;
+	height:0;
+	border-top:10px solid #fff;
+	border-right:10px solid transparent;
+	border-left:10px solid transparent;
+
+}
+
+article{
+	position:absolute;
+	top:800px;
+   
+}
+
+
+
+
+
+

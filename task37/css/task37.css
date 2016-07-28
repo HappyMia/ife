@@ -1,0 +1,166 @@
+*{
+	margin: 0; /*外边据*/
+	padding: 0; /*内边据*/
+}
+body{
+    font-size: 15px;
+    color: #333;
+   }
+#header{
+	background-color:orange;
+	width: auto;
+	height: 50px;
+	margin: 0 auto;
+}
+#header .login{
+	float: right;
+	margin-right:100px;
+	width: 60px;
+	height: 46px;
+	line-height: 50px;
+	font-size:30px;
+	color:green;
+	cursor: pointer; 
+}
+#login{
+	width: 350px;
+	height: 250px;
+	border: 1px solid #ccc;  
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    background: #fff;
+	
+}
+.top,.right,.bottom,.left,.leftTop,.leftBottom,.rightTop,.rightBottom{
+	width:5px;
+	height:5px;
+	/* background:red; */
+}
+.top{
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+	cursor:n-resize;
+}
+.right{
+	position:absolute;
+	height:100%;
+	top:0;
+	right:0;
+	cursor:e-resize;
+}
+.bottom{
+	position:absolute;
+	width:100%;
+	bottom:0;
+	left:0;
+	cursor:s-resize;
+}
+.left{
+	position:absolute;
+	height:100%;
+	bottom:0;
+	left:0;
+	cursor:w-resize;
+}
+.leftTop{
+	position:absolute;
+	top:0;
+	left:0;
+	cursor:nw-resize;
+	/* background:blue; */
+}
+.leftBottom{
+	position:absolute;
+	bottom:0;
+	left:0;
+	cursor:sw-resize;
+	/* background:blue; */
+}
+.rightTop{
+	position:absolute;
+	top:0;
+	right:0;
+	cursor:ne-resize;
+	/* background:blue; */
+}
+.rightBottom{
+	position:absolute;
+	bottom:0;
+	right:0;
+	cursor:se-resize;
+	/* background:blue; */
+}
+#login h2{
+	height: 40px;
+	text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    color: #666;/*字体颜色*/
+   	background:  url(../images/login_header.png) repeat-x;
+   	margin: 0;
+   	padding: 0;
+   	border-bottom: 1px,solid #ccc;
+	cursor:move;
+
+}
+#login h2 img{
+	float: right;
+	position: relative;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#login div.user,#login div.pass{
+	font-size: 15px;
+	color: #666; /*帐号和密码*/
+	padding: 10px 0;
+	text-align: center;
+
+}
+#login  input{
+	font-size: 15px;
+	width: 200px;
+	height: 25px;
+	border: 1px solid #ccc;/*文本框的边框*/
+	background: #fff;
+
+}
+#login div.button{
+	text-align: center;/*将登录框居中，这里不能用left或者right，left和right是相对定位，需要设置position后才行*/
+	padding-top: 20px; 
+}
+#login div input.submit{
+	background: url(../images/login.png) no-repeat;
+	width: 77px;
+	height: 31px;
+    border: none;
+    cursor: pointer;
+}
+#login div.other{
+	text-align: right;
+	padding: 25px 8px;
+	color: #666;
+	cursor: pointer;
+}
+#screen{
+    position: absolute;
+    left: 0;
+    top: 0;
+	background: #000;
+    filter: alpha(opacity=30);
+    /*IE5,8,9支持，ietester的ie6这样写也是不透明的，但是实际上ie6中已经显示正常了。*/
+    opacity: 0.3;
+    /*新版IE和W3C支持*/
+    z-index: 9998;
+    display: none;
+    /*这里没有设置高度和宽度，就是不现实，不加display也行，但是html中有文字的话会显示*/
+}
+p{
+	font-size: 30px;
+    line-height:50px; 
+}
