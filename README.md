@@ -29,7 +29,7 @@
 * task25. 实现一个树的组件，可遍历，折叠，添加，删除节点,[demo](https://happymia.github.io/ife/task25/index.html)
 
 ### 第三阶段：综合练习HTML，CSS，JavaScript
-* task37. 浮出层组件,[demo](https://happymia.github.io/ife/task37/index.html)
+* task37. 浮出层组件,包括拖拽，拖动边沿和四角改变大小，遮罩锁屏[demo](https://happymia.github.io/ife/task37/index.html)
 * task38. 支持表头排序功能的表格组件，[demo](https://happymia.github.io/ife/task38/index.html)
 * task39. 首行冻结表格组件，[demo](https://happymia.github.io/ife/task39/index.html)
 * task41. 日历组件实现，[demo](https://happymia.github.io/ife/task41/index.html)
