@@ -96,7 +96,14 @@ function getStyle(element,attr){
     return style[attr];
 	*/
 }
-
+//跨浏览器获取鼠标滚动的距离
+ /* document.documentElement.scrollTop:IE,firefox能正常获取，chrome始终为0
+    document.body.scrollTop：chrome能正常获取，ie和firefox始终为0 
+    这两个属性一个能正常获取时另一个始终为0	
+ */
+function getScrollTop(){
+	return Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+}
 
 //跨浏览器获取视口大小
 

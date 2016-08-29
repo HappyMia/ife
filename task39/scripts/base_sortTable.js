@@ -79,11 +79,11 @@
 		var toffsetH=table.offsetHeight;    //表格本身的高度
 		
 		addEvent(window,"scroll",function(){
-			if(document.documentElement.scrollTop>(offTop+toffsetH)){ //表格滚出视口隐藏表头
+			if(getScrollTop()>(offTop+toffsetH)){ //表格滚出视口隐藏表头
 				//thead.style.display="none";	  //注意display和visibility的区别
 				thead.style.visibility="hidden";
 			}
-			else if(document.documentElement.scrollTop>offTop)  //表格滚到视口顶部固定表头
+			else if(getScrollTop()>offTop)  //表格滚到视口顶部固定表头
 			{
 			 //thead.style.display="block";
 			 thead.style.visibility="visible";   //显示表头，固定表头，并将表头设置到视口顶部位置
